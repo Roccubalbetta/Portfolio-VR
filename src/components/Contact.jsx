@@ -1,9 +1,9 @@
 import { Mail, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-export function Contact() {
+export function Contacts() {
   return (
-    <section id="contatti" className="section py-20">
+    <section id="contacts" className="section py-16">
       <div className="card p-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div
@@ -12,9 +12,9 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <h2 className="text-3xl md:text-4xl font-serif mb-2">Contatti</h2>
+            <h2 className="text-3xl md:text-4xl font-serif mb-2">Contacts</h2>
             <p className="text-neutral-300">
-              Per collaborazioni, commissioni o informazioni sulle opere.
+              Per collaborazioni, commissioni o press kit.
             </p>
           </motion.div>
 

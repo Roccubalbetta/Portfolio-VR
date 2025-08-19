@@ -1,32 +1,49 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Navbar } from './components/Navbar'
-import { Hero } from './components/Hero'
-import { Gallery } from './components/Gallery'
-import { About } from './components/About'
-import { Contact } from './components/Contact'
+import { HeroFull } from './components/HeroFull'
+import { Work } from './components/Work'
+import { ProjectModal } from './components/ProjectModal'
+import { Bio } from './components/Bio'
+import { Contacts } from './components/Contacts'
+import { StrautemColer } from './components/StrautemColer'
 import { Footer } from './components/Footer'
 
 export default function App() {
-  // In a real project you would fetch this from a CMS or JSON file
-  const artworks = useMemo(() => [
-    { id: 1, title: 'Sospesa', year: '2024', medium: 'Acrilico su tela', img: 'artworks/artwork-1.svg' },
-    { id: 2, title: 'Vento caldo', year: '2023', medium: 'Olio su tela', img: 'artworks/artwork-2.svg' },
-    { id: 3, title: 'Città liquida', year: '2025', medium: 'Digitale', img: 'artworks/artwork-3.svg' },
-    { id: 4, title: 'Metamorfosi', year: '2022', medium: 'Mista', img: 'artworks/artwork-4.svg' },
-    { id: 5, title: 'Alba', year: '2024', medium: 'Aquarello', img: 'artworks/artwork-5.svg' },
-    { id: 6, title: 'Nodo', year: '2023', medium: 'Scultura', img: 'artworks/artwork-6.svg' },
+  const projects = useMemo(() => [
+    {
+      id: 1,
+      title: 'Sospesa',
+      year: '2024',
+      tags: ['Photography', 'Editorial'],
+      cover: 'work/cover-1.jpg',
+      images: ['work/img-1a.jpg', 'work/img-1b.jpg'],
+      description: 'Serie che indaga la sospensione del corpo nello spazio urbano.'
+    },
+    {
+      id: 2,
+      title: 'Vento caldo',
+      year: '2023',
+      tags: ['Installation'],
+      cover: 'work/cover-2.jpg',
+      images: ['work/img-1a.jpg', 'work/img-1b.jpg'],
+      description: 'Installazione site-specific sul tema della soglia termica.'
+    },
   ], [])
+
+  const [openProject, setOpenProject] = useState(null)
 
   return (
     <div>
       <Navbar />
       <main>
-        <Hero />
-        <Gallery artworks={artworks} />
-        <About />
-        <Contact />
+        <HeroFull />
+        <Work projects={projects} onOpen={setOpenProject} />
+        <Bio />
+        <Contacts />
+        <StrautemColer />
       </main>
       <Footer />
+      <ProjectModal project={openProject} onClose={() => setOpenProject(null)} />
     </div>
   )
 }
