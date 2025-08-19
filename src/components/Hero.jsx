@@ -35,7 +35,7 @@ export function Hero() {
         >
           <div className="aspect-[4/3] card overflow-hidden">
             <img
-              src="/artworks/artwork-1.svg"
+              src={import.meta.env.BASE_URL + 'artworks/artwork-1.svg'}
               alt="Hero artwork"
               className="w-full h-full object-cover"
             />
