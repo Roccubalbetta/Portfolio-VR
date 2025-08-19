@@ -2,34 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --ring: 99 102 241; /* brand-500 */
+/* Base */
+html { scroll-behavior: smooth; }
+::selection { background: rgba(176,141,87,.18); }
+
+/* “Carta” leggerissima di sfondo */
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:
+    radial-gradient(800px 400px at 100% -10%, rgba(176,141,87,0.06), transparent 60%),
+    linear-gradient(transparent 0%, rgba(17,17,17,0.02) 100%);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 40%, #34d399 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-}
+/* Layout helpers */
+.section { @apply max-w-6xl mx-auto px-6; }
 
 .card {
-  @apply rounded-2xl bg-neutral-900/50 ring-1 ring-white/5 shadow-glow;
+  background: #fff;
+  border: 1px solid theme('colors.brand.line');
+  border-radius: 16px;
+  box-shadow: theme('boxShadow.card');
 }
 
-.section {
-  @apply max-w-6xl mx-auto px-6;
+/* Link sottile */
+.a-underline {
+  position: relative;
 }
-
-.section { max-width: 72rem; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
-.card { border-radius: 1rem; background: rgba(23,23,23,.5); border: 1px solid rgba(255,255,255,.06); box-shadow: 0 0 120px rgba(99,102,241,0.2); }
-.gradient-text {
-  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 40%, #34d399 100%);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; text-fill-color: transparent;
+.a-underline::after{
+  content:"";
+  position:absolute; left:0; bottom:-2px;
+  width:0; height:1px; background: #111;
+  transition: width .25s ease;
 }
+.a-underline:hover::after{ width:100%; }

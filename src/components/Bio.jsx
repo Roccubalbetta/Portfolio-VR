@@ -3,39 +3,37 @@ import { motion } from 'framer-motion'
 export function Bio() {
   const cvUrl = import.meta.env.BASE_URL + 'cv.pdf'
   return (
-    <section id="bio" className="section py-16">
-      <div className="grid lg:grid-cols-3 gap-10 items-start">
+    <section id="bio" className="section py-24">
+      <div className="grid lg:grid-cols-3 gap-12 items-start">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="lg:col-span-2 space-y-4"
+          transition={{ duration: 0.45 }}
+          className="lg:col-span-2 space-y-5"
         >
-          <h2 className="text-3xl md:text-4xl font-serif">Bio</h2>
-          <p className="text-neutral-300">
-            Testo descrittivo dell’artista proprietario del portfolio. Enfasi su ricerca,
-            temi trattati, media utilizzati, collaborazioni ed esposizioni. Linguaggio essenziale
-            e chiaro, con focus sul processo e sulla poetica.
+          <h2 className="text-4xl font-serif">Bio</h2>
+          <p className="text-stone-700 leading-relaxed">
+            Testo descrittivo dell’artista. Focus su ricerca, poetica, collaborazioni, pubblicazioni ed esposizioni.
           </p>
-          <p className="text-neutral-400">
-            (Sostituisci questo testo con la bio reale. È consigliabile un paragrafo breve + uno medio.)
+          <p className="text-stone-600">
+            (Sostituisci con il testo reale; consigliati 1–2 paragrafi concisi in tono editoriale.)
           </p>
         </motion.div>
 
         <motion.aside
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+          transition={{ duration: 0.45, delay: 0.05 }}
           className="card p-6 space-y-3"
         >
           <h3 className="font-serif text-xl">CV</h3>
-          <p className="text-neutral-300 text-sm">Scarica il curriculum completo in PDF.</p>
+          <p className="text-stone-700 text-sm">Scarica il curriculum completo (PDF).</p>
           <a
             href={cvUrl}
             download
-            className="inline-block px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 transition ring-1 ring-brand-500/30 text-sm"
+            className="inline-block px-4 py-2 rounded-full bg-stone-900 text-white hover:bg-stone-800 transition text-sm"
           >
             Download CV
           </a>

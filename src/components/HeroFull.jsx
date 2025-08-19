@@ -1,48 +1,41 @@
 import { motion } from 'framer-motion'
 
 export function HeroFull() {
-  // Se esiste hero.mp4 lo useremo, altrimenti hero.jpg
   const VIDEO = import.meta.env.BASE_URL + 'media/hero.mp4'
   const IMAGE = import.meta.env.BASE_URL + 'media/hero.jpg'
 
   return (
-    <section id="home" className="relative min-h-screen w-full">
-      {/* Background media */}
+    <section id="home" className="relative min-h-screen w-full bg-brand-sand">
       <div className="absolute inset-0 -z-10">
         <video
           className="w-full h-full object-cover"
           src={VIDEO}
-          autoPlay
-          muted
-          loop
-          playsInline
-          // Se preferisci forzare l'immagine commenta il video e lascia l'img sotto
+          autoPlay muted loop playsInline
           onError={(e) => {
-            // fallback immagine se il video manca
             e.currentTarget.outerHTML = `<img src="${IMAGE}" alt="Background" class="w-full h-full object-cover"/>`
           }}
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
       </div>
 
-      <div className="section flex min-h-screen items-end pb-20">
+      <div className="section flex min-h-screen items-end pb-24">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <h1 className="text-4xl md:text-6xl font-serif leading-tight">
-            <span className="gradient-text">Nome Cognome</span>
+          <p className="uppercase tracking-[0.2em] text-[12px] text-stone-700">Fashion Portfolio</p>
+          <h1 className="mt-2 text-5xl md:text-7xl font-serif leading-[1.05]">
+            Nome Cognome
           </h1>
-          <p className="mt-3 text-neutral-300">
-            Ricerca visiva tra luce, materia e spazio. Selezione di progetti recenti.
+          <p className="mt-4 text-stone-700 max-w-prose">
+            Ricerca visiva su silhouette, tessuti e luce. Progetti selezionati 2022–2025.
           </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#work" className="px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 transition ring-1 ring-brand-500/30">Work</a>
-            <a href="#bio" className="px-5 py-3 rounded-xl ring-1 ring-white/10 hover:bg-white/5 transition">Bio</a>
+          <div className="mt-8 flex gap-4">
+            <a href="#work" className="px-5 py-3 rounded-full bg-stone-900 text-white hover:bg-stone-800 transition">Work</a>
+            <a href="#bio"  className="px-5 py-3 rounded-full border border-brand-line hover:bg-stone-100 transition">Bio</a>
           </div>
         </motion.div>
       </div>

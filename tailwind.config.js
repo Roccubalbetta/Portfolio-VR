@@ -4,27 +4,20 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Cormorant Garamond', 'serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
       },
       colors: {
         brand: {
-          50: '#f7f7ff',
-          100: '#eef0ff',
-          200: '#d9dcff',
-          300: '#b7baff',
-          400: '#8b8fff',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b'
-        }
+          ink: '#111111',    // nero inchiostro
+          sand: '#F8F6F1',   // bianco carta calda
+          line: '#E9E6E0',   // grigio tenue per bordi
+          gold: '#B08D57',   // accento caldo (usalo poco)
+        },
       },
       boxShadow: {
-        glow: '0 0 120px rgba(99,102,241,0.25)',
-      }
+        card: '0 1px 2px rgba(17,17,17,0.06)',
+      },
     },
   },
   plugins: [],
