@@ -6,12 +6,15 @@ export function HeroFull() {
 
   return (
     <section id="home" className="relative min-h-screen w-full bg-brand-sand">
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <video
-          className="w-full h-full object-cover brightness-110"
-          style={{ transform: 'rotate(90deg) scale(1.78)' }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[100vh] min-h-[100vw] object-cover brightness-110"
+          style={{ transform: 'rotate(90deg)', transformOrigin: 'center center' }}
           src={VIDEO}
-          autoPlay muted loop playsInline
+          autoPlay
+          muted
+          loop
+          playsInline
           onError={(e) => {
             e.currentTarget.outerHTML = `<img src="${IMAGE}" alt="Background" class="w-full h-full object-cover"/>`
           }}
