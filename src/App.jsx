@@ -15,8 +15,8 @@ export default function App() {
       title: 'Sospesa',
       year: '2024',
       tags: ['Photography', 'Editorial'],
-      cover: 'work/cover-1.svg',
-      images: ['work/img-1a.svg', 'work/img-1b.svg'],
+      cover: 'artwork/cover-1.svg',
+      images: ['artwork/img-1a.svg', 'artwork/img-1b.svg'],
       description: 'Serie che indaga la sospensione del corpo nello spazio urbano.'
     },
     {
@@ -24,8 +24,8 @@ export default function App() {
       title: 'Vento caldo',
       year: '2023',
       tags: ['Installation'],
-      cover: 'work/cover-2.svg',
-      images: ['work/img-1a.svg', 'work/img-1b.svg'],
+      cover: 'artwork/cover-2.svg',
+      images: ['artwork/img-1a.svg', 'artwork/img-1b.svg'],
       description: 'Installazione site-specific sul tema della soglia termica.'
     },
   ], [])
