@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion'
 
 export function HeroFull() {
-  const VIDEO = import.meta.env.BASE_URL + 'media/hero.mp4'
+  const VIDEO = import.meta.env.BASE_URL + 'artworks/HeroFullVideo.mp4'
   const IMAGE = import.meta.env.BASE_URL + 'media/hero.jpg'
 
   return (
     <section id="home" className="relative min-h-screen w-full bg-brand-sand">
       <div className="absolute inset-0 -z-10">
         <video
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-110"
+          style={{ transform: 'rotate(90deg) scale(1.78)' }}
           src={VIDEO}
           autoPlay muted loop playsInline
           onError={(e) => {
