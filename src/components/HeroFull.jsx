@@ -28,7 +28,7 @@ export function HeroFull() {
         >
           <p className="uppercase tracking-[0.2em] text-[12px] text-stone-700">Fashion Portfolio</p>
           <h1 className="mt-2 text-5xl md:text-7xl font-serif leading-[1.05]">
-            Nome Cognome
+            Vanessa Ruiz
           </h1>
           <p className="mt-4 text-stone-700 max-w-prose">
             Ricerca visiva su silhouette, tessuti e luce. Progetti selezionati 2022–2025.

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <rect width="1200" height="1600" fill="#FFFFFF"/>
+  <rect x="22" y="22" width="1156" height="1556" fill="none" stroke="#E9E6E0" stroke-width="2"/>
+  <text x="60" y="170" fill="#111111" font-family="Cormorant Garamond, serif" font-size="72" font-weight="600">Strautem &amp; Coler</text>
+  <text x="60" y="230" fill="#6B7280" font-family="Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="22">Group A — 1200×1600</text>
+  <text x="1140" y="1520" text-anchor="end" fill="#B08D57" font-family="Manrope, system-ui, sans-serif" font-size="18">VR</text>
+</svg>
