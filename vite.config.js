@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // set the `base` to '/REPO_NAME/' before building & deploying.
 export default defineConfig({
   plugins: [react()],
-  // base: '/REPO_NAME/',
+  base: '/Portfolio-VR/',
 })
