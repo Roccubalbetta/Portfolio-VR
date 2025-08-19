@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const groups = [
-  { title: 'Serie A', images: ['strautem/group-a-1.jpg', 'strautem/group-a-2.jpg'] },
-  { title: 'Serie B', images: ['strautem/group-b-1.jpg', 'strautem/group-b-2.jpg'] },
+  { title: 'Serie A', images: ['strautem/group-a-1.svg', 'strautem/group-a-1.svg'] },
+  { title: 'Serie B', images: ['strautem/group-b-1.svg', 'strautem/group-b-1.svg'] },
 ]
 
 export function StrautemColer() {
