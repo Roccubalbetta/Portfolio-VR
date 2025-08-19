@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ring: 99 102 241; /* brand-500 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 40%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.card {
+  @apply rounded-2xl bg-neutral-900/50 ring-1 ring-white/5 shadow-glow;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-6;
+}
