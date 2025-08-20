@@ -2,6 +2,9 @@ import { Mail, Instagram, Phone, MapPin, Github, Linkedin, Send } from 'lucide-r
 import { motion } from 'framer-motion'
 
 export function Contacts() {
+  const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.15 } } }
+  const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.45 } } }
+
   const EMAIL_TO = 'ciao@example.com' // TODO: sostituisci con la tua email
 
   function onSubmit(e) {
@@ -120,8 +123,8 @@ export function Contacts() {
               {/* Right: Contact Form */}
               <div className="md:col-span-3 p-8 md:p-10">
                 <h3 className="font-serif text-xl mb-4">Scrivimi un messaggio</h3>
-                <form onSubmit={onSubmit} className="grid grid-cols-1 gap-4">
-                  <div>
+                <motion.form onSubmit={onSubmit} className="grid grid-cols-1 gap-4" variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
+                  <motion.div variants={item}>
                     <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-1">Nome</label>
                     <input
                       id="name"
@@ -131,8 +134,8 @@ export function Contacts() {
                       placeholder="Il tuo nome"
                       className="w-full rounded-lg border border-brand-line/60 bg-white/80 px-3 py-2 outline-none focus:ring-2 focus:ring-stone-900/20"
                     />
-                  </div>
-                  <div>
+                  </motion.div>
+                  <motion.div variants={item}>
                     <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-1">Email</label>
                     <input
                       id="email"
@@ -142,8 +145,8 @@ export function Contacts() {
                       placeholder="nome@dominio.com"
                       className="w-full rounded-lg border border-brand-line/60 bg-white/80 px-3 py-2 outline-none focus:ring-2 focus:ring-stone-900/20"
                     />
-                  </div>
-                  <div>
+                  </motion.div>
+                  <motion.div variants={item}>
                     <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-1">Messaggio</label>
                     <textarea
                       id="message"
@@ -153,9 +156,9 @@ export function Contacts() {
                       placeholder="Raccontami brevemente di cosa hai bisogno…"
                       className="w-full rounded-lg border border-brand-line/60 bg-white/80 px-3 py-2 outline-none focus:ring-2 focus:ring-stone-900/20"
                     />
-                  </div>
+                  </motion.div>
 
-                  <div className="flex items-center justify-between gap-4 pt-2">
+                  <motion.div variants={item} className="flex items-center justify-between gap-4 pt-2">
                     <button
                       type="submit"
                       className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-5 py-2.5 text-white hover:bg-stone-800 transition"
@@ -163,8 +166,8 @@ export function Contacts() {
                       <Send size={18} /> Invia
                     </button>
                     <span className="text-xs text-stone-500">oppure scrivimi a <a href={`mailto:${EMAIL_TO}`} className="underline">{EMAIL_TO}</a></span>
-                  </div>
-                </form>
+                  </motion.div>
+                </motion.form>
               </div>
             </div>
           </div>

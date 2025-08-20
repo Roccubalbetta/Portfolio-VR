@@ -36,9 +36,10 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-[18px] font-bold uppercase tracking-wide hover:text-opacity-80 transition duration-200"
+              className="group relative text-[18px] font-bold uppercase tracking-wide hover:text-opacity-80 transition duration-200"
             >
-              {l.label}
+              <span>{l.label}</span>
+              <span className="pointer-events-none absolute left-0 -bottom-1 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 group-hover:scale-x-100" />
             </a>
           ))}
         </div>
