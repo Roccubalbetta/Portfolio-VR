@@ -45,7 +45,7 @@ export function Navbar() {
           : 'text-stone-800 hover:text-stone-600'
       }`
 
-  return (
+  return ( 
     <header className={`${baseHeader} ${headerClass}`}>
       <nav className="section flex items-center justify-between md:justify-center h-20">
         {/* Desktop */}

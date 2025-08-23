@@ -49,7 +49,7 @@ export function Work({ projects = [], onOpen }) {
      // Auto-seleziona il primo progetto al primo render quando activeCat è nullo
   useEffect(() => {
     if (!activeCat && sorted.length > 0) {
-      setActiveCat(sorted[0].title)
+      setActiveCat(sorted[0].title) 
     }
   }, [activeCat, sorted])
  
