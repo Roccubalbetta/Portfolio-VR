@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <title>Runway Grid — Cover</title>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#E9E6E0" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8F6F1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#fade)"/>
+  <rect x="24" y="24" width="1752" height="1152" fill="none" stroke="#E9E6E0" stroke-width="2"/>
+  <rect x="120" y="120" width="1560" height="960" fill="url(#grid)"/>
+
+  <!-- Vertical title block -->
+  <rect x="1260" y="160" width="360" height="720" fill="#FFFFFF" stroke="#E9E6E0"/>
+  <text transform="translate(1440,200) rotate(90)" text-anchor="start"
+        fill="#111111" font-family="Cormorant Garamond, serif" font-size="84" font-weight="600">Vanessa Ruiz</text>
+  <text x="1280" y="840" fill="#6B7280" font-family="Manrope, system-ui, sans-serif" font-size="22">Runway / Editorial / 2025</text>
+</svg>
