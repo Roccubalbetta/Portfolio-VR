@@ -122,4 +122,4 @@ export default function App() {
       <ProjectModal project={openProject} onClose={() => setOpenProject(null)} />
     </BrowserRouter>
   )
-}
+} 
