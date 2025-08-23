@@ -52,7 +52,7 @@ export function Work({ projects = [], onOpen }) {
       setActiveCat(sorted[0].title)
     }
   }, [activeCat, sorted])
-
+ 
 
   return (
         <section id="work" className="relative min-h-screen w-full pt-28 px-10" style={{ fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif' }}>
