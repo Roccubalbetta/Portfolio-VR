@@ -29,7 +29,7 @@ export function Navbar() {
       ? 'backdrop-blur-md bg-white/80 border-b border-brand-line'
       : 'bg-transparent'
   } else {
-    headerClass = 'backdrop-blur-md bg-stone-900/70 shadow-sm'
+    headerClass = 'backdrop-blur-md'
   }
 
   const linkClass = ({ isActive }) =>
@@ -39,9 +39,13 @@ export function Navbar() {
       isActive
         ? 'translate-y-[-1px]'
         : 'hover:translate-y-[-1px] hover:scale-[1.02] active:scale-[0.99]'
-    } ${scrolled ? 'text-stone-800 hover:text-stone-600' : 'text-white hover:text-gray-200'}`
+      } ${
+        location.pathname === '/' && !scrolled
+          ? 'text-white hover:text-gray-200'
+          : 'text-stone-800 hover:text-stone-600'
+      }`
 
-  return (
+  return ( 
     <header className={`${baseHeader} ${headerClass}`}>
       <nav className="section flex items-center justify-between md:justify-center h-20">
         {/* Desktop */}
@@ -52,7 +56,7 @@ export function Navbar() {
                 {l.label}
                 <span
                   className={`pointer-events-none absolute -bottom-1 left-0 h-[2px] transition-all duration-300 ease-out ${
-                    scrolled ? 'bg-stone-800' : 'bg-white'
+                                        (location.pathname === '/' && !scrolled) ? 'bg-white' : 'bg-stone-900'
                   } ${location.pathname === l.to ? 'w-full' : 'w-0 group-hover:w-full'}`}
                 />
               </span>

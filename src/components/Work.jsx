@@ -46,6 +46,14 @@ export function Work({ projects = [], onOpen }) {
     return sorted.find(p => String(p.title || '').toLowerCase() === key) || null
   }, [sorted, activeCat])
 
+     // Auto-seleziona il primo progetto al primo render quando activeCat è nullo
+  useEffect(() => {
+    if (!activeCat && sorted.length > 0) {
+      setActiveCat(sorted[0].title) 
+    }
+  }, [activeCat, sorted])
+ 
+
   return (
         <section id="work" className="relative min-h-screen w-full pt-28 px-10" style={{ fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif' }}>
       <div className="mx-auto w-full max-w-none px-3 sm:px-4 lg:px-6 xl:px-8 2xl:px-10 pb-16 mt-10">
